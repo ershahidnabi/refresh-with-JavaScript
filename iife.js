@@ -10,11 +10,11 @@
     console.log("DB CONNECTED");
 })();
 
-// unnamed iife
 (() => {
     console.log(`DB CONNECT`);
 })();
 
+// unnamed iife
 ((name) => {
     console.log(name);
 })(`Shahid Nabi`);
