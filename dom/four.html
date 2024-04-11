@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sirah Stacks</title>
+    <style>
+        body {
+            background-color: #212121;
+            color: #ff4500;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="lang">
+        <li>JavaScript</li>
+        <!-- <li>React</li>
+        <li>MongoDB</li>
+        <li>Express</li>
+        <li>Node</li> -->
+    </ul>
+</body>
+<script>
+    function addLang(langName) {
+        const li = document.createElement('li')
+        li.innerHTML = `${langName}`
+        document.querySelector('.lang').appendChild(li)
+    }
+
+    addLang("Pyrhon")
+    addLang("Java")
+
+    function addOptLang(langName) {
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.lang').appendChild(li)
+
+    }
+    addOptLang('Flutter')
+    addOptLang('Dart')
+
+
+    //  Edit
+    const secondLang = document.querySelector("li:nth-child(2)")
+    // secondLang.innerHTML = "TypeScript"
+    const newli = document.createElement("li")
+    newli.textContent = "Mojo"
+    secondLang.replaceWith(newli)
+
+    // Edit 
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = '<li>C++</li>'
+
+    // Remove 
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+</script>
+
+</html>
