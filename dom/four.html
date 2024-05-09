@@ -14,48 +14,50 @@
 </head>
 
 <body>
+
     <ul class="lang">
-        <li>JavaScript</li>
-        <!-- <li>React</li>
-        <li>MongoDB</li>
-        <li>Express</li>
-        <li>Node</li> -->
+        <li>Dart</li>
     </ul>
 </body>
+
 <script>
     function addLang(langName) {
         const li = document.createElement('li')
         li.innerHTML = `${langName}`
+
         document.querySelector('.lang').appendChild(li)
     }
 
-    addLang("Pyrhon")
-    addLang("Java")
-
+    addLang('Python')
+    addLang('Java')
+</script>
+<script>
     function addOptLang(langName) {
-        const li = document.createElement('li');
+        // const li = document.createElement('li')
+        // const addText = document.createTextNode(langName)
+        // li.appendChild(addText)
+        // ------------or----------- 
+        const li = document.createElement('li')
         li.appendChild(document.createTextNode(langName))
+
         document.querySelector('.lang').appendChild(li)
 
     }
-    addOptLang('Flutter')
-    addOptLang('Dart')
+    addOptLang('GoLang')
 
-
-    //  Edit
+    // Edit
     const secondLang = document.querySelector("li:nth-child(2)")
-    // secondLang.innerHTML = "TypeScript"
-    const newli = document.createElement("li")
-    newli.textContent = "Mojo"
+    // secondLang.innerHTML = 'JavaScript'
+    const newli = document.createElement('li')
+    newli.textContent = 'Ruby'
     secondLang.replaceWith(newli)
 
-    // Edit 
+    // Edit
     const firstLang = document.querySelector("li:first-child")
-    firstLang.outerHTML = '<li>C++</li>'
+    firstLang.outerHTML = '<li>TypeScript</li>'
 
-    // Remove 
+
+    // remove
     const lastLang = document.querySelector('li:last-child')
     lastLang.remove()
 </script>
-
-</html>
